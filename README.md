@@ -20,6 +20,7 @@ Improve payment tracking
 Provide centralized customer records
 Generate business reports and analytics
 Enhance operational efficiency
+
 🚀 Features
 Authentication
 User Registration
@@ -48,6 +49,7 @@ Security
 Password Encryption using bcrypt
 JWT-based Authentication
 Protected Routes
+
 🏗️ System Architecture
 User / Employee
        │
@@ -87,6 +89,7 @@ Development Tools
 Git
 GitHub
 VS Code
+
 📂 Project Structure
 Insurance_Management_System
 │
@@ -104,6 +107,7 @@ Insurance_Management_System
 │   └── server.js
 │
 └── README.md
+
 ⚙️ Installation
 Clone Repository
 git clone https://github.com/Pavithrareddy812/Insurance_Policy_Management_System.git
@@ -115,6 +119,7 @@ Backend Setup
 cd backend
 npm install
 npm run dev
+
 🗄️ Database Setup
 
 Create MySQL Database:
@@ -134,6 +139,8 @@ DB_USER=root
 DB_PASSWORD=your_password
 DB_NAME=insurance_db
 JWT_SECRET=your_secret_key
+
+
 🔄 Application Flow
 Employee logs into the system.
 Dashboard displays policy and revenue statistics.
@@ -141,6 +148,8 @@ Policies can be created, viewed, updated, and deleted.
 Premium payments are recorded and tracked.
 Reports and analytics are generated.
 Data is securely stored in MySQL.
+
+
 📈 Future Enhancements
 Mobile Application Support
 Email Notifications
