@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Premium Slate-Navy & Ice Emerald Palette */
+  --color-graphite-50: #f8fafc;
+  --color-graphite-100: #f1f5f9;
+  --color-graphite-200: #e2e8f0;
+  --color-graphite-300: #cbd5e1;
+  --color-graphite-400: #94a3b8;
+  --color-graphite-500: #64748b;
+  --color-graphite-600: #475569;
+  --color-graphite-700: #334155;
+  --color-graphite-800: #1e293b;
+  --color-graphite-900: #0f172a;
+  --color-graphite-950: #0b0f19;
+  
+  --color-brand-teal: #0d9488;
+  --color-brand-teal-hover: #0f766e;
+  --color-brand-emerald: #10b981;
+}
+
+html, body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #0f172a;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium Glassmorphism and soft shadow utility classes */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+.shadow-premium {
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.02), 0 2px 4px -1px rgba(15, 23, 42, 0.01);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.04), 0 4px 12px -2px rgba(15, 23, 42, 0.02);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* High-contrast text overrides for glass cards to ensure perfect readability on light backdrops */
+.glass, 
+.glass h1, .glass h2, .glass h3, .glass h4, .glass h5, .glass h6, 
+.glass p, .glass span, .glass div, .glass td, .glass th, .glass label,
+.glass font, .glass button:not(.bg-graphite-900):not(.bg-white) {
+  color: #0f172a !important;
+}
+
+/* Ensure secondary details have high contrast slate colors */
+.glass .text-graphite-400,
+.glass .text-graphite-500,
+.glass .text-graphite-600 {
+  color: #475569 !important;
+}
+
+.glass .text-graphite-700,
+.glass .text-graphite-750,
+.glass .text-graphite-800,
+.glass .text-graphite-900,
+.glass .text-graphite-950 {
+  color: #0f172a !important;
+}
+
+.glass .text-graphite-200,
+.glass .text-graphite-250,
+.glass .text-graphite-300 {
+  color: #1e293b !important;
+}
+
+/* Fix specific colors for table headers & items */
+.glass table th {
+  color: #334155 !important;
+  font-weight: 700 !important;
+}
+
+.glass table td {
+  color: #1e293b !important;
+}
+
+.glass table td.font-mono {
+  color: #0f172a !important;
+}
+
+/* Success status text override to ensure green color stays visible */
+.glass .text-emerald-500, 
+.glass .text-emerald-600, 
+.glass .text-emerald-800,
+.glass .text-emerald-850 {
+  color: #047857 !important;
+}
+
+/* Pending status text override to ensure amber stays readable */
+.glass .text-amber-800, 
+.glass .text-amber-855,
+.glass .text-amber-850 {
+  color: #b45309 !important;
+}
+
+/* Overdue status text override */
+.glass .text-red-500, 
+.glass .text-red-650,
+.glass .text-red-600, 
+.glass .text-red-800,
+.glass .text-red-850 {
+  color: #b91c1c !important;
+}
+
